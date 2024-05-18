@@ -1,3 +1,5 @@
+
+/* start main components */
 :root{
     --main-color:RGB(0, 120, 255);
     --color-section:#f5f5f5;
@@ -17,8 +19,27 @@ html{
     scroll-padding-top:63px;
 }
 
+.main-titel p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #4E4E4E;
+    position: relative;
 
+}
+.main-titel p::after{
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 50px;
+    height: 3px;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
 
+}
+/* end main components */
+
+/* start up button */
 .fixed-icon{
     width: 40px;
     height: 40px;
@@ -30,7 +51,9 @@ html{
     right: 10px;
     cursor: pointer;
 }
+/* end up button */
 
+/* start navbar */
 .navbar .nav-item .nav-link{
     color: white;
     margin-left: 20px;
@@ -56,7 +79,7 @@ html{
     height: 2px;
     bottom: 2px;;
     background-color: white;
-    /* transition: 0.3s; */
+
 }
 .navbar .nav-item .nav-link:hover::after{
     width: 60%;
@@ -65,50 +88,28 @@ html{
 .navbar-brand h4{ 
     color: white;
 }
+/* end navbar */
 
-
-/* active  */
-/* body:has(.Home:target).home-links,
-body:has(.About:target).about-links
-{   
-    color: aqua;
-    font-weight: 800;
-}
-
-
-body:has(.Home:target).navbar .nav-item .nav-link .home-links::after{
-    position: absolute;
-    width: 100%;
-} */
-
-
-
-
-
-
-
-header{
+/* start home section */
+.landing{
     background-image: url(../img/hero-bg.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
 }
-header::after{
+.landing::after{
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.3);
 }
-header h1{
+.landing h1{
     font-size: 60px;
     font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
-
-header p::after{
+.landing p::after{
     font-size: 30px;
     font-weight: 600;
     content: "";
@@ -154,13 +155,9 @@ header p::after{
 100%{ content: "|";}
 
 }
+/* end home section */
 
-
-
-
-
-
-
+/* start about section */
 .about .about-img img{
     width: 120px;
     height: 120px;
@@ -192,42 +189,19 @@ header p::after{
     width: 20%;
     height: 3px;
     background-color: var(--main-color);
-
-
 }
 .about-text p{
     color: #4E4E4E;
     font-weight: 500;
 }
+/* end about section */
 
-/* end about  */
-
-
-.main-titel p{
-    font-size: 1rem;
-    font-weight: 400;
-    color: #4E4E4E;
-    position: relative;
-
-}
-.main-titel p::after{
-    content: "";
-    position: absolute;
-    background-color: var(--main-color);
-    width: 50px;
-    height: 3px;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-
-}
-
+/* start services section */
 .services .icon{
     width:90px ;
     height: 90px;
     border: 8px solid var(--main-color);
     margin: 10px 0px;
-    /* transform: translate(140%); */
     transition: .5s;
 
 }
@@ -235,14 +209,10 @@ header p::after{
     
     font-size: 32px;
 }
-
-
 .services-content h3{
     font-size: 18px;
     text-transform: uppercase;
-
 }
-
 .service-item:hover>.icon{
     background-color: var(--main-color);
     color: white;
@@ -265,7 +235,6 @@ header p::after{
     left: 0;
     top: 0;
     background-color:rgba(0, 120, 255,50%)
-
 } 
 .member-info{
     display: flex;
@@ -278,14 +247,13 @@ header p::after{
 .member-icon{
     width: 65px;
     height: 65px;
-    /* background-color: white; */
     border-radius: 50%;
     border: 8px solid rgb(201, 222, 242);
     margin-bottom: 20px;
 }
+/* end services section */
 
-/* end services  */
-
+/* start portfolio section */
 .portfolio-date{
     font-size: 12px;
 }
@@ -303,53 +271,35 @@ header p::after{
 .porto-icon{
     font-size: 35px;
 }
+/* end portfolio section */
 
-
-
-
-
-
+/* start slide section */
 .slide{
     background-image: linear-gradient(#0077ff94,#0077ff94),url(../img/overlay-bg.jpg);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-
 }
 .client-img{
     width: 120px;
 }
-
 .carousel-indicators [data-bs-target]{
     width: 15px;
     height: 15px;
     border-radius:100%;
 }
-
-/* هواا ده سبب الخط الي كان بيظهر ههههه */
-/* .active::before {
+.active::before {
     position: absolute;
     content: "";
-    left: 0%;
     width: 0%;
     height: 0px;
-    bottom: 0px;
-    background-color:;
-    transition: 0.3s;
-} */
+} 
+/* end slide section */
 
-/* end carsol */
-
-
-
-
-
-
-
+/* start blog section */
 .card-text-blog{
     font-size: 12px;
 }
-
 .blog-privet img{
     width: 40px;
 }
@@ -360,7 +310,6 @@ header p::after{
 .blog-date span{
     font-size: 12px;
 }
-
 .text-layer{
     position: absolute;
     left: 50%;
@@ -370,12 +319,7 @@ header p::after{
     color: white;
     font-size: 12px;
     background-color: var(--main-color);
-
-
-
 }
-
-
 @media all and (min-width:0px) and (max-width:600px){
    
  .text-layer{
@@ -432,30 +376,19 @@ header p::after{
         background-color:var(--main-color);
      }
 }
-/* end blog  */
+/* end blog section */
 
-/* .contact{
-    
-        background-image:linear-gradient(#0077ff94,#0077ff94), url('../img/overlay-bg.jpg');
-        background-position: center;
-        background-size: cover;
-        /* margin: auto; */
-        /* padding-block: var(--sections-padding-block);
-        background-attachment: fixed; */
-        /* height: 100vh; */
-
+/* start contact section */
 .contact{
     background-image: url(../img/overlay-bg.jpg);
     background-position: center center;
     background-size: cover;
     max-height: 1000px;
-    /* background-image:linear-gradient(#0077ff94,#0077ff94)} */
 }
 .text-contect::after{
     content: "";
     position: absolute;
     left: 0px;
-    /* bottom: 0px; */
     top: 65%;
     width: 10%;
     height: 2px;
@@ -470,7 +403,6 @@ header p::after{
 }
 .supmit input:hover{
     background-color: #18335194;
-
 }
 .contact-content li i{
     font-size: 14px;
@@ -484,19 +416,17 @@ header p::after{
     width: 40px;
     height: 40px;
     background-color: white;
-border:solid 2px var(--main-color) ;
-margin-left: 10px;
-
+    border:solid 2px var(--main-color) ;
+    margin-left: 10px;
 }
+/* end contact section */
 
+/* start footer */
 footer{
     background-color: var(--main-color);
 }
+footer div{
+    font-size: 15px;
+}
+/* end footer */
 
-footer p{
-    font-size: 15px;
-}
-footer span{
-    font-size: 15px;
-    
-}
